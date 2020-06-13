@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Linq;
 
 public class MergeNames
 {
     public static string[] UniqueNames(string[] names1, string[] names2)
     {
-        throw new NotImplementedException();
+        return names1.Concat(names2).Distinct().ToArray();
     }
 
     public static void Main(string[] args)
